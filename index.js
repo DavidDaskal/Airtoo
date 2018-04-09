@@ -17,3 +17,4 @@ nightmare
         console.error('an error has occurred: ' + error);
     })
     .then(() => (console.log('process exit'), process.exit()));
+//worker: DEBUG=* xvfb-run --auto-servernum --server-args="-screen 0 1024x768x24" node --harmony index.js
