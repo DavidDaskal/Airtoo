@@ -1,24 +1,23 @@
 {
-  "name": "life-scrape",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "Airtime",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "start": "node index.js"
+    "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/oscarmorrison/lifeScrape.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/oscarmorrison/nightmare-heroku"
-  },
-  "homepage": "https://github.com/oscarmorrison/nightmare-heroku",
   "dependencies": {
-    "electron": "^1.6.10",
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "electron": "^1.8.4",
+    "express": "~4.15.5",
+    "express-handlebars": "^3.0.0",
+    "hbs": "~4.0.1",
     "jquery": "^3.3.1",
-    "nightmare": "^2.10.0"
+    "morgan": "~1.9.0",
+    "nightmare": "^3.0.0",
+    "path": "^0.12.7",
+    "request": "^2.85.0",
+    "serve-favicon": "~2.4.5"
   }
 }

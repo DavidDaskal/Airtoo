@@ -1,0 +1,17 @@
+<h2>Preparing details for Flight #{{flightnum}}....<h2>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<form action='/flightInfo'>
+<button type="submit" id="flightInfoButton">Press for Flight Info</button>
+</form>
+
+<script>
+button = $('#flightInfoButton');
+button.hide();
+setTimeout(function(){
+	button.show();
+},10000);
+</script>
+{{>locationtest}}
+
+
