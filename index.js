@@ -124,7 +124,7 @@ var Nightmare = require('nightmare'),
     .catch(error => {
         console.log(error);
       })
-    .then(() => (console.log('process exit')));
+    .then(() => (console.log('process exit'), process.exit()));
   
  }
 
