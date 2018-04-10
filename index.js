@@ -123,7 +123,8 @@ var Nightmare = require('nightmare'),
         })
     .catch(error => {
         console.log(error);
-      });
+      })
+    .then(() => (console.log('process exit')));
   
  }
 
