@@ -21,12 +21,10 @@ res.render('index',{title:"Airtoo"});
 
     //res.sendFile(path.join(__dirname + '/index.html'));
 
-router.get('/initflightInfo', function(req,res){
+router.get('/flightInfo', function(req,res){
 	flight_number = req.query.flightnum;
   console.log(flight_number);
-  res.render('flightresultspend',{
-    flightnum:flight_number
-  });
+  
   // res.render('flightresults',flight_data);
    nightmare_cb = function(r){
 
@@ -42,17 +40,16 @@ router.get('/initflightInfo', function(req,res){
     gate_arrival_time:r.gate_arrival_time
         
   }
+  res.render('flightresults',flight_data);
 
 }
 
 flightInfo((flight_number),nightmare_cb);
 
+
   
 });
 
-router.get('/flightInfo', function(req,res){
-  res.render('flightresults',flight_data);
-})
 
 
 
