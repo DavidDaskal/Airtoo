@@ -23,7 +23,11 @@ res.render('index',{title:"Airtoo"});
 
 router.get('/flightInfo', function(req,res){
 	flight_number = req.query.flightnum;
-  console.log(flight_number);
+  iphoneLoc = req.query.iphoneLoc;
+  if (iphoneLoc){
+  iphoneLoc = iphoneLoc.toString(); 
+    }
+
   
   // res.render('flightresults',flight_data);
    nightmare_cb = function(r){
@@ -38,7 +42,8 @@ router.get('/flightInfo', function(req,res){
     arrival_date:r.arrival_date,
     departure_date:r.departure_date,
     takeoff_time:r.takeoff_time,
-    gate_arrival_time:r.gate_arrival_time
+    gate_arrival_time:r.gate_arrival_time,
+    iphoneLoc:iphoneLoc
     
   }
   res.render('index',flight_data);

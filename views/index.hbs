@@ -1,6 +1,13 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<div class="header">
 <h2>Welcome to Airtoo - A Place to Track Flights Accurately Know When to Leave to get to the Airport on Time</h2>
+</div>
+<!-- <div id='back'> <img src="/stylesheets/plane747.jpg">
+</div>
+ -->
+
 
 {{#if airline}}
 {{>flightresults}}
@@ -8,15 +15,26 @@
 
 
 <form action = '/flightInfo' id="flightForm">
-Please Enter Flight Number <span id='flspan'>ex.DAL2 </span><br> <input type = "text" name="flightnum"><br><br>
-<input type = "submit" value="Get Flight Info">
+Please Enter Flight Number <span id='flspan'>ex.DAL2 </span><br> <input type = "text" name="flightnum"><br>
+<p class='itest'>Looks like you are using IOS<br> Please enter your current Location (No spaces) <br>
+ <input class='itest' type = "text" name="iphoneLoc">
+</p>
+ <br><br>
+
+
+<button type = "submit" class="button" value="Get Flight Info">Get Flight Info</button>
 </form>
 
-<div id='loader'><img src = 'https://media.giphy.com/media/8bTEB5VwcNozK/giphy.gif'>  loading....</div>
+<div id='loader'><img src='https://media.giphy.com/media/8bTEB5VwcNozK/giphy.gif'></div>
 
 <script type="text/javascript">
   	
   		$(document).ready(function(){
+
+  			var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+  			if (!iOS) {
+  				$(".itest").hide();
+  			}
 
   			$('#loader').hide();
   		$('#flightForm').submit(function(){

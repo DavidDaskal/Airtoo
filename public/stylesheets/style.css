@@ -1,3 +1,34 @@
+.button {
+    background-color: #06152D;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#maindiv {
+		background-color: black;
+		width:50%;
+		margin-bottom: 100px;
+		line-height: 2.0;
+	}
+
+	
+
+
+
+	li {
+
+		font-size:20px;
+		color:green;
+	}
+
+
 body {
 /*  padding: 50px;
 */  font: 24px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -39,6 +70,7 @@ input[type=text] {
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
+    font-size: 20px;
 }
 
 html {
@@ -64,3 +96,115 @@ html {
 a {
   color: #00B7FF;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------------------------------------------------------------------------------
+/*body{
+  padding: 50px;
+  font: 24px "Lucida Grande", Helvetica, Arial, sans-serif;
+  }
+
+
+#back {
+	opacity: .4;
+	width:100%;
+	max-width: 990px;
+	height:100px;
+	z-index: 0;
+
+}
+
+.header {
+ 
+ 
+	clear:both;
+	color:red;
+	font-size:30px;
+	font-weight: bold;
+	text-align: center;
+	width:100%;
+	height:120%;
+	padding-top: 12px;
+	background-color: black ;
+	font-family: fantasy;
+	margin:0px 0px 0px 0px;
+	border-bottom: 2px solid #eee;
+
+}
+ 
+h2 {
+	color:black;
+}
+
+#flightForm {
+
+	font-color:black;
+}
+
+#flspan {
+	font-size: 14px;
+}
+input[type=text] {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+html {
+	/* The image used 
+    /*background-image: url("plane747.jpg");*/
+
+    /* Full height */
+ /*   height: 100%; */
+
+  /*  /* Center and scale the image nicely */
+/*    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;*/
+
+/*}*/
+
+
+
+
+
+
+/*
+a {
+  color: #00B7FF;
+}*/
