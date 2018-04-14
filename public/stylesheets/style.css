@@ -1,8 +1,65 @@
 body {
 /*  padding: 50px;
-*/  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: gray;
+*/  font: 24px "Lucida Grande", Helvetica, Arial, sans-serif;
+  
+
+
+  
+/*  background-image: url(nightair.jpg) no-repeat center center fixed 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background: opacity:0.2;*/
+
 }
+/*html {
+
+  background: url(nightair.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}*/
+h2 {
+	color:black;
+}
+
+#flightForm {
+
+	color:black;
+}
+
+#flspan {
+	font-size: 14px;
+}
+input[type=text] {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+html {
+	/* The image used */
+    background-image: url("plane747.jpg");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+
+
+
+
 
 a {
   color: #00B7FF;

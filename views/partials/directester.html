@@ -1,13 +1,19 @@
 
-<iframe width="600" height="450" frameborder="0" style="border:0"
-src="https://www.google.com/maps/embed/v1/directions?origin=place_id:ChIJAdzkXmJXwokRr4VCTUXIfaY&destination=place_id:ChIJ7wzsxeFSwokRhvLXxTe087M&key=AIzaSyCxqkWSV6F0DHTWoYU2ids-tJ--QnAhPPM" allowfullscreen></iframe>
+
+<img src='nightair.jpg'>
+<!-- <iframe width="600" height="450" frameborder="0" style="border:0"
+src="https://www.google.com/maps/embed/v1/directions?origin=place_id:ChIJAdzkXmJXwokRr4VCTUXIfaY&destination=ewr+airport&key=AIzaSyCxqkWSV6F0DHTWoYU2ids-tJ--QnAhPPM" allowfullscreen></iframe>
 <script>
   function finLoc() {
+
+
+
+
     var geocoder = new google.maps.Geocoder;
-geocoder.geocode({'location': {lat:40,lng:-74}}, function(results, status) {
+geocoder.geocode({'location': {lat:40.749276699999996,lng:-74.0317045}}, function(results, status) {
           if (status === 'OK') {
               
-              console.log(results);
+              console.log(results[0].place_id);
           }
           else{
             console.log('geo failed');
@@ -21,5 +27,6 @@ geocoder.geocode({'location': {lat:40,lng:-74}}, function(results, status) {
 <script async defer
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxqkWSV6F0DHTWoYU2ids-tJ--QnAhPPM&callback=finLoc">
 </script>
+<iframe src=""></iframe> -->
 
 

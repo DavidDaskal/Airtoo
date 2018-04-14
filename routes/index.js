@@ -29,6 +29,7 @@ router.get('/flightInfo', function(req,res){
    nightmare_cb = function(r){
 
     flight_data = {
+    title:"Airtoo",
     flightnum : flight_number,
     airline: r.airline,
     arrival:r.arrival,

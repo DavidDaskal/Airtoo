@@ -1,12 +1,14 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<p>Welcome to Airtoo - A place to track flights accurately know when to leave to get to the Airport on Time</p>
+<h2>Welcome to Airtoo - A Place to Track Flights Accurately Know When to Leave to get to the Airport on Time</h2>
 
 {{#if airline}}
 {{>flightresults}}
 {{else}}
+
+
 <form action = '/flightInfo' id="flightForm">
-Please Enter Flight Number ex. AFL101 <input type = "text" name="flightnum"><br>
+Please Enter Flight Number <span id='flspan'>ex.DAL2 </span><br> <input type = "text" name="flightnum"><br><br>
 <input type = "submit" value="Get Flight Info">
 </form>
 
@@ -24,4 +26,5 @@ Please Enter Flight Number ex. AFL101 <input type = "text" name="flightnum"><br>
 		})
 </script>
 {{/if}}
+
 
