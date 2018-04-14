@@ -15,7 +15,7 @@
 <button onclick="getLocation(locationTriage)">Show Map</button>
 
 <div id="map"></div>
-</html>
+
 
 <script>
 var latitude;
@@ -93,15 +93,15 @@ function getLocation(callback) {
 
 
 
-  loadImage = '<img src="https://media.giphy.com/media/3ohhwFhUCOXOJfuttC/giphy.gif">'
+  loadImage = '<img src="https://media.giphy.com/media/3ohjVbsqBv7wmpP9BK/giphy.gif">'
 
   map.html(loadImage);
     if (navtrue) {
 
         var options = {
-          enableHighAccuracy: true,
-          timeout: 5000,
-          maximumAge: 0
+          // enableHighAccuracy: true,
+          timeout: 60000,
+          maximumAge: 60000
         };
 
         navigator.geolocation.getCurrentPosition(showPosition,error,options);
@@ -115,10 +115,11 @@ function getLocation(callback) {
 
 
 </script>
+
 <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxqkWSV6F0DHTWoYU2ids-tJ--QnAhPPM">
 </script>
-
+</html>
 
 
 

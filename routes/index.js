@@ -38,9 +38,9 @@ router.get('/flightInfo', function(req,res){
     departure_date:r.departure_date,
     takeoff_time:r.takeoff_time,
     gate_arrival_time:r.gate_arrival_time
-        
+    
   }
-  res.render('flightresults',flight_data);
+  res.render('index',flight_data);
 
 }
 

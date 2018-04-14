@@ -1,0 +1,63 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<style>
+	#maindiv {
+		background-color: black;
+		width:50%;
+		margin-bottom: 100px;
+		line-height: 1.6;
+	}
+
+	ul {
+		 display: table;
+			  width: 100%;
+			  height: 100%; /* For at least Firefox */
+			  min-height: 100%;
+			  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+			          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+			}
+
+
+
+	li {
+
+		font-size:18px;
+		color:green;
+	}
+
+</style>
+
+<html>
+
+<div id="maindiv">
+<ul>
+<!-- 	{{#each air_info}}
+    <li>{{@key}} : {{this}}</li>
+	{{/each}} -->
+	
+	<li> Airline: {{airline}}</li>
+	<li> Flight Status: {{arrival}}</li>
+	<li> Departure City: {{departure_city}}</li>
+	<li id="airport" data-port={{arrival_city}}> Arrival City : {{arrival_city}}</li>
+	<li> Departure Date: {{departure_date}}</li>
+	<li> Arrival Date : {{arrival_date}}</li>
+	<li> Take Off Time: {{takeoff_time}}</li>
+	<li id="gateArrival"> Arrival At Gate: {{gate_arrival_time}}</li> 
+ 
+</ul>
+</div>
+
+<br>
+<br>
+
+</html>
+<script type="text/javascript">
+	var d = 150, factor = d / 3 * 2; // increment delay by two thirds original delay
+	$("#maindiv ul li").each(function(){
+    $(this).delay(d = d + factor).animate({marginLeft:'115px'},500);
+		});
+	var airport = $("#airport").data('port')+' airport';
+	
+
+</script>
+{{>dirtoairport}}
