@@ -1,3 +1,34 @@
+* {
+	margin:0;
+	padding: 0;
+}
+
+.header {
+	background-color: gray;
+	margin-top: 0px;
+	width: 100%;
+}
+h2 {
+	margin-top: 0;
+	margin-bottom: 0;
+	border-bottom: 4px solid black;
+	color:black;
+}
+
+#container {
+	text-align: center;
+	/*width: 100%;*/
+	min-height: 100%;
+	margin: 0 auto;
+	/*clear: both;*/
+}
+
+#maincontainer {
+	overflow: auto;
+	padding-bottom: 50px;
+}
+
+
 .button {
     background-color: #06152D;
     border: none;
@@ -13,49 +44,43 @@
 
 #maindiv {
 		background-color: black;
-		width:50%;
+		text-align: center;
 		margin-bottom: 100px;
 		line-height: 2.0;
 	}
-
+#back {
+	opacity: 0.6;
+	height: 100%;
+	position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index:-1;
+}
 	
 
-
+ul {
+	text-align: center;
+}
 
 	li {
-
+		align-content: center;
 		font-size:20px;
 		color:green;
+		text-align: center;
 	}
 
 
-body {
-/*  padding: 50px;
-*/  font: 24px "Lucida Grande", Helvetica, Arial, sans-serif;
-  
-
-
-  
-/*  background-image: url(nightair.jpg) no-repeat center center fixed 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background: opacity:0.2;*/
+html,body {
+  font: 24px "Lucida Grande", Helvetica, Arial, sans-serif;
+  height:100%;
+  padding: 0;
+  margin: 0;
 
 }
-/*html {
 
-  background: url(nightair.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 
-}*/
-h2 {
-	color:black;
-}
+
+
 
 #flightForm {
 
@@ -73,28 +98,21 @@ input[type=text] {
     font-size: 20px;
 }
 
-html {
-	/* The image used */
-    background-image: url("plane747.jpg");
 
-    /* Full height */
-    height: 100%; 
 
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
+#footer {
+	position: relative;
+	background-color: black;
+	margin-top: -50px;
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	clear:both;
+	border-top: 4px solid gray;
+	color: white;
 }
-
-
-
-
-
-
-
-a {
-  color: #00B7FF;
+#footer div {
+	margin-top: 10px;
 }
 
 

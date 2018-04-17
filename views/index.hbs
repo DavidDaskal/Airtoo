@@ -4,32 +4,44 @@
 <div class="header">
 <h2>Welcome to Airtoo - A Place to Track Flights Accurately Know When to Leave to get to the Airport on Time</h2>
 </div>
-<!-- <div id='back'> <img src="/stylesheets/plane747.jpg">
+
+<div id="container">
+
+	 <div id="maincontainer">
+		<div id="back">
+	  <img src="/stylesheets/moscow.jpg">
+		</div>
+ 	
+
+		{{#if airline}}
+		{{>flightresults}}
+		{{else}}
+
+
+		<form action = '/flightInfo' id="flightForm">
+		Please Enter Flight Number <span id='flspan'>ex.DAL2 </span><br> <input type = "text" name="flightnum"><br>
+		<p class='itest'>Looks like you are using IOS<br> Please enter your current Location (No spaces) <br>
+		 <input class='itest' type = "text" name="iphoneLoc">
+		</p>
+		 <br><br>
+
+
+		<button type = "submit" class="button" value="Get Flight Info">Get Flight Info</button>
+		</form>
+
+		<div id='loader'><img src='https://media.giphy.com/media/8bTEB5VwcNozK/giphy.gif'></div>
+	</div>
 </div>
- -->
 
+<footer id="footer">
+	<div> David Daskal &copy</div>
+</footer>
 
-{{#if airline}}
-{{>flightresults}}
-{{else}}
-
-
-<form action = '/flightInfo' id="flightForm">
-Please Enter Flight Number <span id='flspan'>ex.DAL2 </span><br> <input type = "text" name="flightnum"><br>
-<p class='itest'>Looks like you are using IOS<br> Please enter your current Location (No spaces) <br>
- <input class='itest' type = "text" name="iphoneLoc">
-</p>
- <br><br>
-
-
-<button type = "submit" class="button" value="Get Flight Info">Get Flight Info</button>
-</form>
-
-<div id='loader'><img src='https://media.giphy.com/media/8bTEB5VwcNozK/giphy.gif'></div>
 
 <script type="text/javascript">
   	
   		$(document).ready(function(){
+  			
 
   			var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
   			if (!iOS) {
@@ -44,5 +56,6 @@ Please Enter Flight Number <span id='flspan'>ex.DAL2 </span><br> <input type = "
 		})
 </script>
 {{/if}}
+
 
 
