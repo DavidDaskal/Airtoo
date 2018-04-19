@@ -6,15 +6,13 @@
 
 <div id="maindiv">
 <ul>
-<!-- 	{{#each air_info}}
-    <li>{{@key}} : {{this}}</li>
-	{{/each}} -->
-	<!--hiding addr in li if user has iphone -->
 
-	<li id="iLoc" data-addr={{iphoneLoc}}> Airline: {{airline}} </li>      
-	<li> Flight Status: {{arrival}}</li>
-	<li> Departure City: {{departure_city}}</li>
-	<li id="airport" data-port={{arrival_city}}> Arrival City : {{arrival_city}}</li>
+	<!--hiding addr in li if user has iphone!-->
+
+	<li id="iLoc" data-addr={{iphoneLoc}}> Airline: {{airline}}  </li>      
+	<li id="choice" data-choice={{airchoice}}> Flight Status: {{arrival}}</li>
+	<li id="airport_depart" data-arr_depart={{departure_city}}> Departure City: {{departure_city}}</li>
+	<li id="airport_arrive" data-arr_arrive={{arrival_city}}> Arrival City : {{arrival_city}}</li>
 	<li> Departure Date: {{departure_date}}</li>
 	<li> Arrival Date : {{arrival_date}}</li>
 	<li> Take Off Time: {{takeoff_time}}</li>
@@ -30,10 +28,17 @@
 	$("#maindiv ul li").each(function(){
     $(this).delay(d = d + factor).animate({marginLeft:'115px'},900);
 		});
+	if ($('#choice').data('choice') == "departing") {
 
-	var airport = $("#airport").data('port')+' airport';
+		airport = $("#airport_depart").data('arr_depart')+' airport';
+	}
+	else if ($('#choice').data('choice') == "arriving") {
+		airport = $("#airport_arrive").data('arr_arrive')+' airport';
+	}
 	var iLoc = $("#iLoc").data('addr');
-	// iLoc = iLoc.toString();
+	console.log('iLoc in flightresults',iLoc);
+	
+    
 	
 
 </script>

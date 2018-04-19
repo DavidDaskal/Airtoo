@@ -21,20 +21,28 @@ res.render('index',{title:"Airtoo"});
 
     //res.sendFile(path.join(__dirname + '/index.html'));
 
-router.get('/flightInfo', function(req,res){
-	flight_number = req.query.flightnum;
-  iphoneLoc = req.query.iphoneLoc;
+router.post('/flightInfo', function(req,res){
+  console.log('req.body',req.body);
+  airchoice = req.body.airchoice;
+	flight_number = req.body.flightnum;
+  iphoneLoc = req.body.iphoneLoc;
+  console.log()
+
   if (iphoneLoc){
-  iphoneLoc = iphoneLoc.toString(); 
+  
+  iphoneLoc = iphoneLoc.toString();
+  iphoneLoc = iphoneLoc.replace(/,/g,'+');
+  iphoneLoc = iphoneLoc.replace(/ /g ,'+'); 
+  console.log('from index.js after replacements',iphoneLoc);
     }
 
   
-  // res.render('flightresults',flight_data);
    nightmare_cb = function(r){
 
     flight_data = {
     title:"Airtoo",
     flightnum : flight_number,
+    airchoice:airchoice,
     airline: r.airline,
     arrival:r.arrival,
     departure_city:r.departure_city,
@@ -60,7 +68,7 @@ flightInfo((flight_number),nightmare_cb);
 
 
 
-// router.post('/post', function(req,res){
+// router.post('post', function(req,res){
 //   console.log('req.body',req.body);
 //   res.send('this is a post test');
 // });

@@ -4,15 +4,17 @@
 }
 
 .header {
-	background-color: gray;
+	background-color:#003399  ;
 	margin-top: 0px;
 	width: 100%;
+
 }
-h2 {
+h3 {
 	margin-top: 0;
-	margin-bottom: 0;
+	margin-bottom: 20px;
 	border-bottom: 4px solid black;
-	color:black;
+	color:white;
+	font-family: "Helvetica";
 }
 
 #maincontainer {
