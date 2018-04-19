@@ -33,7 +33,9 @@
     
  
    <form id='altsubmit'>
-    <input type='text' id="altaddress" placeholder="Please Enter Current Location">
+    <p>Please Enter Current Location Below</p>
+    <br>
+    <input type='text' id="altaddress" placeholder="Location">
     <input type='button' onclick="altAdd()" class='button' value="submit">
   </form>
   <form action='/'>
@@ -70,7 +72,7 @@
     <script>
         // var music = new Audio("/audio/coverme.mp3");
         // music.play();
-      $('#altsubmit').hide();
+      // $('#altsubmit').hide();
       console.log('port=',airport+' iloc='+iLoc);
       origMap = document.getElementById("embed");
       loadImage = '<img src="https://media.giphy.com/media/3ohjVbsqBv7wmpP9BK/giphy.gif">';
