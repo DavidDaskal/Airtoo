@@ -5,12 +5,12 @@
 <h2>Welcome to Airtoo - A Place to Track Flights Accurately Know When to Leave to get to the Airport on Time</h2>
 </div>
 
-<div id="container">
+<div id="maincontainer">
 
-	 <div id="maincontainer">
-		<div id="back">
+	 <div id="contentcontainer">
+		<!-- <div id="back">
 	  <img src="/stylesheets/moscow.jpg">
-		</div>
+		</div> -->
  	
 
 		{{#if airline}}
@@ -19,29 +19,34 @@
 
 
 		<form action = '/flightInfo' id="flightForm">
-		Please Enter Flight Number <span id='flspan'>ex.DAL2 </span><br> <input type = "text" name="flightnum"><br>
+		<p id='enterflnum'><strong>Please Enter Flight Number</strong></p> <span id='flspan'>ex.DAL2 </span><br> <input type = "text" name="flightnum"><br>
 		<p class='itest'>Looks like you are using IOS<br> Please enter your current Location (No spaces) <br>
 		 <input class='itest' type = "text" name="iphoneLoc">
 		</p>
 		 <br><br>
-
-
 		<button type = "submit" class="button" value="Get Flight Info">Get Flight Info</button>
 		</form>
 
+
 		<div id='loader'><img src='https://media.giphy.com/media/8bTEB5VwcNozK/giphy.gif'></div>
 	</div>
-</div>
 
+
+</div>
 <footer id="footer">
-	<div> David Daskal &copy</div>
+	<div> Airtoo &copy 2018</div>
 </footer>
+
+
 
 
 <script type="text/javascript">
   	
   		$(document).ready(function(){
   			
+  			console.log('BODY HEIGHT=',$(document.body).height());
+  			  			console.log('document HEIGHT=',$(document).height());
+  			  			  			console.log('window HEIGHT=',$(window).height());
 
   			var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
   			if (!iOS) {
