@@ -19,7 +19,7 @@
 
 
 		<form action = '/flightInfo' method="post" id="flightForm">
-		<p id='enterflnum'><strong>Please Enter Flight Number</strong></p> <span id='flspan'>ex.DAL2 </span><br> <input type = "text" name="flightnum"><br>
+		<p id='enterflnum'><strong>Please Enter Flight Number</strong></p> <span id='flspan'>ex.DAL2 - arriving </span><br> <input type = "text" name="flightnum"><br>
 		<p class='itest'>Looks like you are using IOS<br> Please enter your current Location (No spaces) <br>
 		 <input class='itest' type = "text" name="iphoneLoc">
 		</p>
@@ -52,10 +52,9 @@
 <script type="text/javascript">
   	
   		$(document).ready(function(){
-  			
-  			console.log('BODY HEIGHT=',$(document.body).height());
-  			  			console.log('document HEIGHT=',$(document).height());
-  			  			  			console.log('window HEIGHT=',$(window).height());
+
+  			var music = new Audio("/audio/heartnoise.mp3");
+  			music.play();
 
   			var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
   			if (!iOS) {
