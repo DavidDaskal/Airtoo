@@ -18,7 +18,7 @@
 		{{else}}
 
 
-		<form action = '/flightInfo' method="post" id="flightForm">
+		<form action = '/flightInfo' method="GET" id="flightForm">
 		<p id='enterflnum'><strong>Please Enter Flight Number</strong></p> <span id='flspan'>ex.DAL2 - arriving </span><br> <input type = "text" name="flightnum"><br>
 		<p class='itest'>Looks like you are using IOS<br> Please enter your current Location (No spaces) <br>
 		 <input class='itest' type = "text" name="iphoneLoc">
@@ -56,8 +56,7 @@
   	
   		$(document).ready(function(){
 
-  			var music = $("#music");
-  			music.volume = 0.0;
+
 
   			var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
   			if (!iOS) {

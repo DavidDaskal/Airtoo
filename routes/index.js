@@ -21,11 +21,11 @@ res.render('index',{title:"Airtoo"});
 
     //res.sendFile(path.join(__dirname + '/index.html'));
 
-router.post('/flightInfo', function(req,res){
-  console.log('req.body',req.body);
-  airchoice = req.body.airchoice;
-	flight_number = req.body.flightnum;
-  iphoneLoc = req.body.iphoneLoc;
+router.get('/flightInfo', function(req,res){
+  console.log('req.query',req.query);
+  airchoice = req.query.airchoice;
+	flight_number = req.query.flightnum;
+  iphoneLoc = req.query.iphoneLoc;
   console.log()
 
   if (iphoneLoc){
@@ -63,6 +63,8 @@ flightInfo((flight_number),nightmare_cb);
 
   
 });
+
+
 
 
 
